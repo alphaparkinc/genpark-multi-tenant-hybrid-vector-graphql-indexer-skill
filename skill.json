@@ -1,0 +1,41 @@
+{
+  "name": "genpark-multi-tenant-hybrid-vector-graphql-indexer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-tenant hybrid vector database engine integrating BM25 lexical ranking and dense HNSW filtering.",
+  "author": "genpark",
+  "category": "vector-database",
+  "tags": [
+    "weaviate",
+    "hybrid-search",
+    "multi-tenancy",
+    "graphql-api",
+    "bm25-vector-fusion"
+  ],
+  "inputs": {
+    "tenant_id": {
+      "type": "string"
+    },
+    "search_query": {
+      "type": "string"
+    },
+    "alpha_weight": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "graphql_query_id": {
+      "type": "string"
+    },
+    "tenant": {
+      "type": "string"
+    },
+    "tenant_isolation_verified": {
+      "type": "boolean"
+    },
+    "graphql_response_json_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
